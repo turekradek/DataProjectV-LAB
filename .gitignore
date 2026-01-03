@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Środowisko (WAŻNE dla CI/CD)
+.env
+*.log
+
+# System
+.DS_Store

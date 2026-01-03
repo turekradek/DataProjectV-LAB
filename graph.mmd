@@ -1,0 +1,15 @@
+graph TD
+    subgraph Gitea_Server
+        Repo[Repozytorium Kodu] --> Trigger[Event: Push/Merge]
+    end
+
+    subgraph Gitea_Runner_Kubuntu
+        Action[Gitea Actions]
+        Action --> Linter[1. Lint: ruff/flake8]
+        Action --> Test[2. Test: pytest]
+        Action --> Build[3. Build: podman build]
+        Action --> Deploy[4. Deploy: podman-compose up]
+    end
+
+    Linter -.->|Fail| Dev[Notyfikacja: Popraw kod]
+    Deploy -->|Success| Live[System: Nowe źródło działa]
