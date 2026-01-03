@@ -1,11 +1,5 @@
-# Python
-__pycache__/
-*.py[cod]
-.venv/
+.gitea
 
-# Środowisko (WAŻNE dla CI/CD)
-.env
-*.log
-
-# System
-.DS_Store
+data/ssh
+data/git
+data/*
