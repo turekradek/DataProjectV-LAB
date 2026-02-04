@@ -1,5 +1,5 @@
 .gitea
-
+. vscode
 data/ssh
 data/git
 data/*
